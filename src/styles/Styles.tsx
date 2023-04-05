@@ -19,13 +19,23 @@ export const ChildContainer = styled.div`
   flex-direction:row;
   margin: 0 auto; 
   align-items:center;
-  justify-content:center;
+  // justify-content: space-around;
   justify-item:center;
-  gap:20px
+  gap:20px;
+
 `
-export const Right = styled.div`
-`
-export const Left = styled.div`
+export const LetterDiv = styled.div`
+  display:flex;
+  flex-direction:column;
+  align-items:start;
+  justify-content:center;
+  weight:100vh;
+  `
+export const ImageDiv = styled.div`
+  flex:1;
+  margin-top: 80px;
+
+
 `
 
 export const Section = styled.div`
@@ -57,14 +67,51 @@ export const Links = styled.div`
   gap:20px
 `
 
+export const NavbarList = styled.ul`
+  display:flex;
+  gap:20px;
+`
+
 export const List = styled.ul`
   display:flex;
+  flex-direction:column;
+  justify-content: start;
   gap:20px;
 `
 
 export const ListItem = styled.li`
   list-style-type:none;
   cursor:pointer;
+`
+
+export const PageListItem = styled.li`
+  list-style-type:none;
+  cursor:pointer;
+  font-size:100px;
+  font-weight:bold;
+  color:transparent;
+  -webkit-text-stroke:2px white;
+  position:relative;
+  ::after {
+    content: "${(props) => props.text}";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: pink;
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  &:hover {
+    ::after {
+      animation: moveText 0.5s linear both;
+      @keyframes moveText {
+        to {
+          width: 100%;
+        }
+      }
+    }
+  }
 `
 
 export const Icon = styled.img`
@@ -78,7 +125,7 @@ export const Icons = styled.div`
 
 export const Button = styled.button`
   cursor:pointer;
-  width:120px;
+  width:160px;
   padding:10px;
   color:white;
   background-color: #FF0076;
@@ -86,6 +133,7 @@ export const Button = styled.button`
   border-style: none;
   border:none;
   font-size:16px;
+  font-weight:bold;
 `
 
 export const Logo = styled.img`
@@ -96,6 +144,7 @@ export const Logo = styled.img`
 
 export const Image = styled.img`
   object-fit: contain;
+
   animation: animate 2s infinite ease alternate;
  
   @keyframes animate {
@@ -108,6 +157,9 @@ export const Image = styled.img`
 export const Title = styled.h1`
   font-size:64px;
 `
+export const Title2 = styled.h1`
+  font-size:48px;
+`
 
 export const SubTitle = styled.h2`
   color: #FF0076;
@@ -115,4 +167,42 @@ export const SubTitle = styled.h2`
 `
 export const Paragraph = styled.p`
   font-size:20px;
+`
+
+export const FormDiv = styled.div`
+  flex:1;
+  display:flex;
+  justify-content:flex-end;
+  // background-color:white;
+`
+export const Form = styled.form`
+  display:flex;
+  justify-content: center;
+  flex-direction:column;
+  width:500px;
+  gap:20px;
+`
+
+export const FormButton = styled.button`
+  cursor:pointer;
+  padding:10px;
+  color:white;
+  background-color: #FF0076;
+  border-radius:5px;
+  border-style: none;
+  border:none;
+  font-size:16px;
+  font-weight:bold;
+`
+
+export const Input = styled.input`
+  padding:12px;
+  border:none;
+  border-radius:5px;
+`
+
+export const TextArea = styled.textarea`
+  padding:12px;
+  border-radius:8px;
+
 `

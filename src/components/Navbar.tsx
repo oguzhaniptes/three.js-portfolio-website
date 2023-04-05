@@ -1,20 +1,20 @@
 import React from 'react'
-import { NavbarDiv, NavbarSection, List, ListItem, Button, Links, Logo, Icon, Icons } from '../styles/Styles'
+import {Logo, Icon, NavbarDiv, NavbarSection, ListItem, Button, Links, Icons, NavbarList } from '../styles/Styles'
 
 export default function Navbar() {
     return (
         <NavbarSection>
             <NavbarDiv>
                 <Links>
-                    <Logo src='public/img/logo.png'></Logo>
-                    <List>
+                    <Logo src='./img/logo.png'></Logo>
+                    <NavbarList>
                         <ListItem>Home</ListItem>
                         <ListItem>Contact</ListItem>
-                    </List>
+                    </NavbarList>
 
                 </Links>
                 <Icons>
-                    <Icon src='public/img/search.png' width={'28px'}></Icon>
+                    <Icon src='./img/search.png' width={'28px'}></Icon>
                     <Button>Click here!</Button>
                 </Icons>
             </NavbarDiv>
